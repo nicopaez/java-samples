@@ -46,4 +46,15 @@ public class CursoTest {
 
         curso.inscribir(alumnoJuan);
     }
+
+    @Test(expected = AlumnoInadminisbleException.class)
+    public void noPermiteInscribirAlumnosSinMail(){
+        String nombre = "Matematica 1";
+        Integer cupo = 30;
+        Curso curso = new Curso(nombre, cupo);
+        curso.establecerEdadMinimaAdmitida(18);
+        Alumno alumnoJuan = new Alumno("Juan", "Perez", 22);
+
+        curso.inscribir(alumnoJuan);
+    }
 }

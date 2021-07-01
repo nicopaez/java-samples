@@ -21,4 +21,8 @@ public class Alumno {
     public boolean esMenorA(Integer edadMinima) {
         return edadMinima > this.edad;
     }
+
+    public boolean tieneMail() {
+        return !MAIL_INDEFINIDO.equals(this.mail);
+    }
 }

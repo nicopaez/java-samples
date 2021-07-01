@@ -33,6 +33,10 @@ public class Curso {
             throw new AlumnoInadminisbleException();
         }
 
+        if (!alumno.tieneMail()){
+            throw new AlumnoInadminisbleException();
+        }
+
         this.alumnos.add(alumno);
     }
 
